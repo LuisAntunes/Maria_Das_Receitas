@@ -4,24 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
+    android:background="#BADBDF"
+    android:backgroundTint="#8ECCE8"
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:contentDescription="Maria das Receitas Welcome"
+        android:scaleType="fitXY"
+        android:contentDescription="Imagem Maria das Receitas"
         app:srcCompat="@drawable/maria"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        tools:layout_editor_absoluteX = "0dp"
+        tools:layout_editor_absoluteY = "0dp"
+        />
+
+
+    <Button
+        android:id="@+id/open_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="200dp"
+        android:text="Tirar Foto"
+        app:layout_constraintBottom_toTopOf="@+id/open_details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/open_details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minWidth="200dp"
-        android:text="Abrir detalhes"
+        android:text="Abrir Detalhes"
         app:layout_constraintBottom_toTopOf="@+id/show_dialog"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -32,10 +47,19 @@
         android:layout_height="wrap_content"
         android:minWidth="200dp"
         android:text="Guardar Receita"
-        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/open_profile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <Button
+        android:id="@+id/open_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="200dp"
+        android:text="Abrir Perfil"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
